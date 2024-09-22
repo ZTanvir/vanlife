@@ -1,0 +1,29 @@
+{
+  "name": "vanlife-backend",
+  "version": "1.0.0",
+  "description": "This is backend api for van life app.Here you can get van information.If you are van owner you will get income you made with van.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ZTanvir/vanlife.git"
+  },
+  "keywords": [
+    "Nodejs",
+    "express",
+    "react"
+  ],
+  "author": "Zahirul Islam Tanvir",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ZTanvir/vanlife/issues"
+  },
+  "homepage": "https://github.com/ZTanvir/vanlife#readme",
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.21.0",
+    "sqlite3": "^5.1.7"
+  }
+}
