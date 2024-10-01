@@ -1,5 +1,7 @@
 const db = require("../models/connectSqlDb");
 
+const getVansDetails = (req, res, next) => {};
+
 const getVanImage = (req, res, next) => {
   if (!req.file) {
     return res.status(400).json("error:No file uploaded.");
