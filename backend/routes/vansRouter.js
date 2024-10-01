@@ -20,14 +20,9 @@ const storage = multer.diskStorage({
 var upload = multer({ storage: storage });
 vanRouter.use("/uploads", express.static("uploads"));
 
-vanRouter.get("/van", (req, res) => {
-  res.status(200).send("<h1>Van route</h1>");
-});
+vanRouter.get("/vans", vanController.getAllVansInformation);
 
-vanRouter.get("/van/:id", (req, res) => {
-  const { id } = req.params;
-  res.status(200).send(`<h1>Van id ${id}</h1>`);
-});
+vanRouter.get("/vans/:id", vanController.getSingleVanInformation);
 
 vanRouter.post("/van/uploads", upload.single("bus"), vanController.getVanImage);
 

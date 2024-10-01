@@ -1,6 +1,36 @@
 const db = require("../models/connectSqlDb");
 
-const getVansDetails = (req, res, next) => {};
+const getAllVansInformation = (req, res) => {
+  const getVansDetailsQuery = "SELECT * FROM vans_details";
+
+  db.all(getVansDetailsQuery, (err, row) => {
+    if (err) {
+      return res
+        .status(500)
+        .json({ Error: `Error getting all vans informations,${err}` });
+    }
+    return res.status(200).json(row);
+  });
+};
+
+const getSingleVanInformation = (req, res) => {
+  console.log(req.params);
+
+  const { id } = req.params;
+  const getVanDetailQuery = "SELECT * FROM vans_details WHERE id=?";
+  db.get(getVanDetailQuery, [id], (err, row) => {
+    if (err) {
+      return res
+        .status(500)
+        .json({ Error: `Error getting all vans informations,${err}` });
+    }
+    // check does the item in the db?
+    // if found return {item},if not null return
+    !row
+      ? res.status(200).json({ message: `Van infomation not found in the db` })
+      : res.status(200).json(row); //item found
+  });
+};
 
 const getVanImage = (req, res, next) => {
   if (!req.file) {
@@ -25,4 +55,8 @@ const getVanImage = (req, res, next) => {
   next();
 };
 
-module.exports = { getVanImage };
+module.exports = {
+  getAllVansInformation,
+  getSingleVanInformation,
+  getVanImage,
+};
