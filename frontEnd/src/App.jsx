@@ -1,7 +1,12 @@
 import "./App.css";
+import Vanlife from "./Components/Vanlife";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <Vanlife />
+    </>
+  );
 }
 
 export default App;
