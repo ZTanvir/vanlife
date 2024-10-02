@@ -1,3 +1,4 @@
+import Button from "./Button";
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 
@@ -11,6 +12,7 @@ const Vanlife = () => {
         ]}
       />
       <Footer text="VANLIFE" />
+      <Button text="Find your van" bgColor="red" btnColor="white" />
     </>
   );
 };

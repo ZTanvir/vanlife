@@ -1,0 +1,10 @@
+.buttonContainer {
+  padding: 1rem;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  text-align: center;
+}
+.buttonContainer:hover {
+  opacity: 0.8;
+}
