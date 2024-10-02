@@ -1,3 +1,4 @@
+import Footer from "./Footer";
 import Navbar from "./Navbar";
 
 const Vanlife = () => {
@@ -9,6 +10,7 @@ const Vanlife = () => {
           { name: "Vans", id: crypto.randomUUID() },
         ]}
       />
+      <Footer text="VANLIFE" />
     </>
   );
 };
