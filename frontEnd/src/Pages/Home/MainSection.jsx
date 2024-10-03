@@ -18,7 +18,12 @@ const MainSection = () => {
           Add adventure to your life by joining the #vanlife movement. Rent the
           perfect van to make your perfect road trip.
         </p>
-        <Button text="Find your van" bgColor="#FF8C38" btnColor="#FFFFFF" />
+        <Button
+          text="Find your van"
+          bgColor="#FF8C38"
+          btnColor="#FFFFFF"
+          hoverColor="#ff9f5a"
+        />
       </section>
     </div>
   );
