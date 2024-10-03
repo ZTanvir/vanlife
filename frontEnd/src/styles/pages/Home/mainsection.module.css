@@ -1,0 +1,38 @@
+.homeMainContainer {
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  z-index: 0;
+}
+.overLay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+  z-index: 1;
+}
+.homePageInfoContainer {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  gap: 2rem;
+  color: white;
+  z-index: 1;
+  max-width: 1200px;
+  padding: 0rem 2rem;
+}
+.homePageInfoContainer button {
+  margin-top: 2rem;
+}
+
+.homePageInfoTitle {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.2;
+}
+.homePageInfoDescription {
+  font-weight: 400;
+}
