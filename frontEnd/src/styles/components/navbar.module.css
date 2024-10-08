@@ -16,3 +16,7 @@
   margin-right: auto;
   width: 150px;
 }
+.navContainer a {
+  color: black;
+  text-decoration: none;
+}

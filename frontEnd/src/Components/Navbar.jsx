@@ -1,4 +1,5 @@
 import styles from "../styles/components/navbar.module.css";
+import { NavLink } from "react-router-dom";
 import vanlifeLogo from "../assets/logo.png";
 
 const Navbar = ({ pagesList }) => {
@@ -6,10 +7,23 @@ const Navbar = ({ pagesList }) => {
     <nav className={styles.navContainer}>
       <ul>
         <li className={styles.homepage}>
-          <img src={vanlifeLogo} alt="vanlife logo" />
+          <NavLink to="/">
+            <img src={vanlifeLogo} alt="vanlife logo" />
+          </NavLink>
         </li>
         {pagesList.map((page) => (
-          <li key={page.id}>{page.name}</li>
+          <li key={page.id}>
+            <NavLink
+              to={`/${page.name.toLowerCase()}`}
+              style={({ isActive }) => {
+                return {
+                  textDecoration: isActive ? "underline" : "",
+                };
+              }}
+            >
+              {page.name}
+            </NavLink>
+          </li>
         ))}
       </ul>
     </nav>
