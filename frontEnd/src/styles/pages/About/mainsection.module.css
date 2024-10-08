@@ -1,0 +1,30 @@
+.aboutPageInfoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.aboutPageInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 1200px;
+  padding: 2rem;
+}
+.aboutPageImg {
+  order: -1;
+  max-width: 1200px;
+}
+.exploreVanContainer {
+  padding: 2rem;
+  background-color: #ffcc8d;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: start;
+}
+:is(.exploreVanContainer > h3, .exploreVanContainer > h4) {
+  font-size: 24px;
+}
+.exploreVanContainer > button {
+  margin-top: 1rem;
+}
