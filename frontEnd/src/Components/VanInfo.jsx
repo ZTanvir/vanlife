@@ -1,14 +1,20 @@
 import styles from "../styles/components/vaninfo.module.css";
 const VanInfo = ({ vanImgSrc, name, price, type }) => {
+  const baseUrl = import.meta.env.VITE_SERVER_URL;
   return (
-    <div className={styles.allVansInformation}>
-      <img src={vanImgSrc} alt={name} />
-      <div className={styles.VanNamePrice}>
-        <span>{name}</span>
-        <span>{price}</span>
+    <figure className={styles.allVansInformation}>
+      <img src={`${baseUrl}/api/${vanImgSrc}`} alt={name} />
+      <figcaption className={styles.vanNamePrice}>
+        <span className={styles.vanName}>{name}</span>
+        <span className={styles.vanPricePerDay}>
+          <span className={styles.vanPrice}>${price}</span>
+          <span>/day</span>
+        </span>
+      </figcaption>
+      <div data-type={type} className={styles.vanType}>
+        {type}
       </div>
-      <div className={styles.vanType}>{type}</div>
-    </div>
+    </figure>
   );
 };
 export default VanInfo;
