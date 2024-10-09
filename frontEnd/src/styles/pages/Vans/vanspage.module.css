@@ -1,0 +1,20 @@
+.vansPageContainer {
+  height: 100%;
+  display: grid;
+  grid-template-columns: 2rem repeat(3, 1fr) 2rem;
+  grid-template-rows: auto 1fr auto;
+  row-gap: 2rem;
+}
+.vansPageContainer > header {
+  grid-column: 1/-1;
+}
+.vansPageContainer > main {
+  grid-column: 2/5;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+}
+
+.vansPageContainer > footer {
+  grid-column: 1/-1;
+}
