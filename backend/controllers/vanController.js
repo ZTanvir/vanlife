@@ -22,12 +22,12 @@ const getSingleVanInformation = (req, res) => {
     if (err) {
       return res
         .status(500)
-        .json({ Error: `Error getting all vans informations,${err}` });
+        .json({ Error: `Error getting all vans information,${err}` });
     }
     // check does the item in the db?
     // if found return {item},if not null return
     !row
-      ? res.status(200).json({ message: `Van infomation not found in the db` })
+      ? res.status(200).json({ message: `Van information not found in the db` })
       : res.status(200).json(row); //item found
   });
 };

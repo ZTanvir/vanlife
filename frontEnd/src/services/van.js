@@ -11,4 +11,14 @@ const getAllVansData = async () => {
   }
 };
 
-export default { getAllVansData };
+const getSingleVanData = async (vanId) => {
+  try {
+    const response = await axios.get(`${baseUrl}/api/vans/${vanId}`);
+    const data = await response.data;
+    return data;
+  } catch (error) {
+    console.error("Error on getting single van information", error.message);
+  }
+};
+
+export default { getAllVansData, getSingleVanData };
