@@ -35,7 +35,7 @@ const VanPage = ({}) => {
           ]}
         />
       </header>
-      <main>
+      <main className={styles.vanInformation}>
         {vanData.length > 0 &&
           (vanData[0].message ? (
             <h1>Van not found</h1>
