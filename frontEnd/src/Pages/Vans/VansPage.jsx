@@ -11,8 +11,7 @@ const VansPage = ({}) => {
   useEffect(() => {
     const getVanData = async () => {
       try {
-        const vansInformation = await VanService.getAllVansData();
-        console.log("van info", vansInformation);
+        const vansInformation = await VanService.getAllVansData();        
         setVansData(vansInformation);
       } catch (error) {
         console.error(error.message);
