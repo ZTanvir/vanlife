@@ -36,3 +36,7 @@
 .homePageInfoDescription {
   font-weight: 400;
 }
+
+.findYourVanLink > button{
+  width: 100%;
+}

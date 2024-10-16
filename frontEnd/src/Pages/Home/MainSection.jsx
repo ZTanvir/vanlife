@@ -1,7 +1,7 @@
 import Button from "../../Components/Button";
 import styles from "../../styles/pages/Home/mainsection.module.css";
-import mountainImg from "../../assets/mountain.png";
 import mountainImgL from "../../assets/mountainImage.png";
+import { Link } from "react-router-dom";
 
 const MainSection = () => {
   return (
@@ -18,12 +18,14 @@ const MainSection = () => {
           Add adventure to your life by joining the #vanlife movement. Rent the
           perfect van to make your perfect road trip.
         </p>
-        <Button
-          text="Find your van"
-          bgColor="#FF8C38"
-          btnColor="#FFFFFF"
-          hoverColor="#ff9f5a"
-        />
+        <Link className={styles.findYourVanLink} to="/vans">
+          <Button
+            text="Find your van"
+            bgColor="#FF8C38"
+            btnColor="#FFFFFF"
+            hoverColor="#ff9f5a"
+          />
+        </Link>
       </section>
     </div>
   );
