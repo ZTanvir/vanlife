@@ -28,3 +28,7 @@
 .exploreVanContainer > button {
   margin-top: 1rem;
 }
+.aboutPageInfoContainer a {
+  text-decoration: none;
+  color: white;
+}

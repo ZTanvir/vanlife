@@ -1,6 +1,8 @@
 import styles from "../styles/components/vaninfo.module.css";
+
 const VanInfo = ({ vanImgSrc, name, price, type }) => {
   const baseUrl = import.meta.env.VITE_SERVER_URL;
+
   return (
     <figure className={styles.allVansInformation}>
       <img src={`${baseUrl}/api/${vanImgSrc}`} alt={name} />

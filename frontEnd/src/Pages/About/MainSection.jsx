@@ -1,6 +1,7 @@
 import sitOnVanImg from "../../assets/sitOnVan.png";
 import Button from "../../Components/Button";
 import styles from "../../styles/pages/About/mainsection.module.css";
+import { Link } from "react-router-dom";
 
 const MainSection = () => {
   return (
@@ -27,12 +28,14 @@ const MainSection = () => {
         <section className={styles.exploreVanContainer}>
           <h3>Your destination is waiting.</h3>
           <h4>Your van is ready.</h4>
-          <Button
-            text="Explore our vans"
-            bgColor="#161616"
-            btnColor="white"
-            hoverColor="#1D1C1C"
-          />
+          <Link to="/vans">
+            <Button
+              text="Explore our vans"
+              bgColor="#161616"
+              btnColor="white"
+              hoverColor="#1D1C1C"
+            />
+          </Link>
         </section>
       </div>
 

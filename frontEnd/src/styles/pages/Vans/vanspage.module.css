@@ -18,3 +18,8 @@
 .vansPageContainer > footer {
   grid-column: 1/-1;
 }
+.vansPageContainer a{
+
+  text-decoration: none;
+  color: rgb(54, 54, 54);
+}

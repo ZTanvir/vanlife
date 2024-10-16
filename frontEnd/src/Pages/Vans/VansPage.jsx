@@ -4,6 +4,7 @@ import Footer from "../../Components/Footer";
 import VanService from "../../services/van";
 import VanInfo from "../../Components/VanInfo";
 import styles from "../../styles/pages/Vans/vanspage.module.css";
+import { Link } from "react-router-dom";
 
 const VansPage = ({}) => {
   const [vansData, setVansData] = useState([]);
@@ -11,7 +12,7 @@ const VansPage = ({}) => {
   useEffect(() => {
     const getVanData = async () => {
       try {
-        const vansInformation = await VanService.getAllVansData();        
+        const vansInformation = await VanService.getAllVansData();
         setVansData(vansInformation);
       } catch (error) {
         console.error(error.message);
@@ -33,13 +34,15 @@ const VansPage = ({}) => {
       <main>
         {vansData.length > 0
           ? vansData.map((van) => (
-              <VanInfo
-                key={van.id}
-                vanImgSrc={van.path}
-                name={van.name}
-                price={van.rent}
-                type={van.type}
-              />
+              // got to /vans/id page
+              <Link to={`${van.id}`} key={van.id}>
+                <VanInfo
+                  vanImgSrc={van.path}
+                  name={van.name}
+                  price={van.rent}
+                  type={van.type}
+                />
+              </Link>
             ))
           : null}
       </main>
